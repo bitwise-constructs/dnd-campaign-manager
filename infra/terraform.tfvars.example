@@ -1,0 +1,21 @@
+# Copy this to terraform.tfvars and fill in your values.
+# DO NOT commit terraform.tfvars to source control.
+
+project_name = "dndcm"
+environment  = "dev"
+location     = "centralus"
+
+# SQL credentials — choose a strong password
+sql_admin_username = "sqladmin"
+sql_admin_password = "CHANGE_ME_StrongP@ssw0rd!"
+
+# Entra ID — get these from the Azure portal after creating app registrations,
+# or let Terraform create them (in which case these are used as identifiers).
+# If you already created the apps manually, paste the client IDs here.
+entra_tenant_id     = "YOUR_TENANT_ID"
+entra_api_client_id = "YOUR_API_CLIENT_ID"
+entra_spa_client_id = "YOUR_SPA_CLIENT_ID"
+
+# Free tier settings (safe for trial accounts)
+app_service_sku = "F1"
+sql_database_sku = "GP_S_Gen5_1"

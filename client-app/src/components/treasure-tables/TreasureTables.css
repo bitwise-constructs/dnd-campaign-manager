@@ -1,0 +1,208 @@
+.generator-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.generator-config {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.generator-hint {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.generator-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.weight-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-deep);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.weight-editor h4 {
+  font-size: 0.95rem;
+}
+
+.weight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.weight-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+}
+
+.weight-item-name {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.weight-input {
+  width: 60px !important;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+/* --- Treasure Table Display --- */
+
+.treasure-table-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tt-name {
+  font-size: 1.15rem;
+}
+
+.tt-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.15rem;
+}
+
+.tt-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* --- Roll Result --- */
+
+.roll-result {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.02));
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  animation: rollReveal 0.4s ease-out;
+}
+
+@keyframes rollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.roll-dice {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gold-dim);
+  border-radius: var(--radius-sm);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.roll-value {
+  transform: rotate(-45deg);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bg-deep);
+}
+
+.roll-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.roll-item-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.roll-item-cat {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Table entries --- */
+
+.tt-entries .cell-roll {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-gold);
+  white-space: nowrap;
+}
+
+.tt-entries .cell-item-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.tt-entries .cell-weight {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.row-rolled td {
+  background: rgba(212, 168, 67, 0.1) !important;
+  border-color: var(--border-gold);
+}
+
+@media (max-width: 768px) {
+  .generator-form {
+    grid-template-columns: 1fr;
+  }
+
+  .tt-header {
+    flex-direction: column;
+  }
+}
