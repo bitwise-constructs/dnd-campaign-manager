@@ -1,3 +1,5 @@
+Claude gen'd readme, take with grain of salt:
+
 # Arcane Ledger — D&D Campaign Manager
 
 A clean-architecture web application for managing D&D campaigns between and during sessions. Built with **ASP.NET Core 8** (C#) and **React + TypeScript**, authenticated via **Microsoft Entra ID**.
